@@ -1,0 +1,30 @@
+form {
+  margin-bottom: 20px;
+  background-color: rgba(78, 78, 78, 0.815);
+}
+
+.form-group {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+}
+.input-container,
+input {
+  width: 60%;
+}
+.input-container input {
+  width: 100%;
+}
+.input-container span {
+  display: inline-block;
+  color: red;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.form-group label {
+  text-align: right;
+  padding-right: 15px;
+  width: 40%;
+}

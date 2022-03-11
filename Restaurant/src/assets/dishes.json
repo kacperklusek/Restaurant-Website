@@ -1,0 +1,175 @@
+{
+  "dishes": [
+    {
+      "name": "test",
+      "cuisineType": "cursus",
+      "type": "tellus.",
+      "category": "primis in",
+      "ingredients": "Niaspan, Vytorin, Lyrica, Lovaza, Ciprofloxacin HCl",
+      "maxPerDay": 13,
+      "price": 82,
+      "imgUrls": [
+        "https://d1e3z2jco40k3v.cloudfront.net/-/media/kamispl-2016/recipe/800/pizza_po_sycylijsku_800.jpg?rev=e74c15a6dfa44f009139fe181aadb281&vd=20200704T033337Z&hash=B46406C8799C8392AE37468F69359F8E"
+      ],
+      "rating": []
+    },
+    {
+      "name": "adipiscing, enim mi tempor lorem,",
+      "cuisineType": "facilisi.",
+      "category": "fringilla cursus",
+      "ingredients": "Naproxen, Ventolin HFA, Oxycontin, Doxycycline Hyclate, Benicar",
+      "maxPerDay": 8,
+      "price": 39,
+      "description": "elit elit fermentum risus, at fringilla purus mauris a nunc. In at pede. Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas. Sed pharetra, felis",
+      "imgUrls": [
+        "https://www.oetker.pl/Recipe/Recipes/oetker.pl/pl-pl/miscellaneous/image-thumb__51050__RecipeDetail/pizza-domowa.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "sit amet, consectetuer",
+      "cuisineType": "luctus",
+      "type": "nostra,",
+      "category": "morbi tristique",
+      "maxPerDay": 29,
+      "price": 73,
+      "description": "risus. Donec egestas. Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate",
+      "imgUrls": [
+        "https://ocdn.eu/pulscms-transforms/1/-vxk9kqTURBXy8wNmQzYjQ5YzA2MzRiYTVkZTg2N2M3NjFiYjBjZGFmNC5qcGVnk5UDAB_NA-jNAjKTBc0DFM0BvJMJpmU0ZjU3ZQaBoTAB/pizza-margherita.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "nisl arcu iaculis enim,",
+      "cuisineType": "dui.",
+      "type": "In",
+      "category": "orci luctus",
+      "maxPerDay": 22,
+      "price": 76,
+      "description": "sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed, est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed",
+      "imgUrls": [
+        "https://poprostupycha.com.pl/wp-content/uploads/2020/04/pizza_1.jpg",
+        "https://poprostupycha.com.pl/wp-content/uploads/2020/04/pizza_1.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "diam dictum sapien.",
+      "cuisineType": "aliquet.",
+      "type": "cursus",
+      "category": "urna. Nullam",
+      "ingredients": "Sertraline HCl, Azithromycin, Seroquel, Pantoprazole Sodium, Suboxone",
+      "maxPerDay": 21,
+      "price": 32,
+      "description": "Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut,",
+      "imgUrls": [
+        "https://www.oetker.pl/Recipe/Recipes/oetker.pl/pl-pl/miscellaneous/image-thumb__51050__RecipeDetail/pizza-domowa.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": " Duis mi",
+      "cuisineType": "Suspendisse",
+      "type": "tristique",
+      "category": "sit amet,",
+      "maxPerDay": 21,
+      "price": 51,
+      "description": "non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus, accumsan interdum",
+      "imgUrls": [
+        "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0002/11/pizza-pepperoni.jpeg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "libero. Donec consectetuer",
+      "cuisineType": "ac",
+      "type": "mattis.",
+      "category": "enim, condimentum",
+      "ingredients": "Nexium, Metoprolol Tartrating, Lyrica, Tricor, Nasonex",
+      "maxPerDay": 19,
+      "price": 66,
+      "imgUrls": [
+        "https://ocdn.eu/pulscms-transforms/1/-vxk9kqTURBXy8wNmQzYjQ5YzA2MzRiYTVkZTg2N2M3NjFiYjBjZGFmNC5qcGVnk5UDAB_NA-jNAjKTBc0DFM0BvJMJpmU0ZjU3ZQaBoTAB/pizza-margherita.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "ut, pellentesque",
+      "cuisineType": "vel",
+      "type": "semper",
+      "category": "mi lorem,",
+      "ingredients": "Niaspan, Ciprofloxacin HCl, Viagra, Januvia, APAP/Codeine",
+      "maxPerDay": 20,
+      "price": 22,
+      "description": "eu elit. Nulla facilisi. Sed neque. Sed eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum ante ipsum primis in faucibus orci luctus",
+      "imgUrls": [
+        "https://poprostupycha.com.pl/wp-content/uploads/2020/04/pizza_1.jpg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "Cras dictum",
+      "cuisineType": "magnis",
+      "type": "risus",
+      "category": "magna. Phasellus",
+      "ingredients": "Azithromycin, Ciprofloxacin HCl, Diazepam, Naproxen, Advair Diskus",
+      "maxPerDay": 28,
+      "price": 63,
+      "description": "eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem",
+      "imgUrls": [
+        "https://www.mojegotowanie.pl/media/cache/default_view/uploads/media/recipe/0002/11/pizza-pepperoni.jpeg"
+      ],
+      "rating": []
+    },
+    {
+      "name": "feugiat tellus",
+      "cuisineType": "et,",
+      "type": "fermentum",
+      "category": "ipsum porta",
+      "ingredients": "Zetia, Spiriva Handihaler, Warfarin Sodium, Proair HFA, Hydrocodone/APAP",
+      "maxPerDay": 9,
+      "price": 45,
+      "imgUrls": [
+        "https://d1e3z2jco40k3v.cloudfront.net/-/media/kamispl-2016/recipe/800/pizza_po_sycylijsku_800.jpg?rev=e74c15a6dfa44f009139fe181aadb281&vd=20200704T033337Z&hash=B46406C8799C8392AE37468F69359F8E"
+      ],
+      "rating": [
+        {
+          "nickName": "lorem",
+          "name": "ipsum",
+          "content": "great pizza definitely would try it again, great service good price. i dont know what else to say, its all good",
+          "purchaseDate": "2021-12-09",
+          "rate": 5
+        }
+      ]
+    },
+    {
+      "name": "Salmon",
+      "cuisineType": "French",
+      "category": "Fish",
+      "ingredients": "Salmon, Lemon, Spinach",
+      "maxPerDay": 10,
+      "price": 40,
+      "description": "Salmon with something to it",
+      "imgUrls": [
+        "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Orange-Salmon-with-Sauteed-Spinach_exps139881_THHC2377560B02_28_5bC_RMS.jpg",
+        "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/exps100610_SD153323D06_05_5b.jpg"
+      ],
+      "rating": [
+        {
+          "nickName": "John from dacota",
+          "name": "John Doe",
+          "content": "Mamma mia, this salmon is delicious! 100% gonna return to eat it again!",
+          "purchaseDate": "2021-12-24",
+          "rate": 5
+        },
+        {
+          "nickName": "John from Ohio",
+          "name": "John Oed",
+          "content": "What is wrong with this guy (John from dacota)? I've eaten this 'salmon' and it's nearly edible...",
+          "purchaseDate": "2021-12-27",
+          "rate": 2
+        }
+      ]
+    }
+  ]
+}

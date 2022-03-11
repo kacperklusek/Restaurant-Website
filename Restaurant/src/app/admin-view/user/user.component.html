@@ -1,0 +1,85 @@
+<div class="container card">
+  <div class="info">
+    <div class="email">{{ user.email }}</div>
+    <div class="id">ID: {{ user.id }}</div>
+    <span>Roles:</span>
+    <ul class="roles">
+      <li class="role" *ngFor="let item of user.roles | keyvalue">
+        {{ item.key }} - {{ item.value }}
+      </li>
+    </ul>
+  </div>
+
+  <span
+    class="btn btn-danger"
+    (click)="onBanUser()"
+    id="banUser"
+    *ngIf="!user.banned"
+    >Ban User</span
+  >
+  <span
+    class="btn btn-danger"
+    (click)="onUnbanUser()"
+    id="banUser"
+    *ngIf="user.banned"
+    >Unban User</span
+  >
+  <div class="dropdown" *ngIf="!isLoading">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Change roles
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <div>
+          <input
+            class="dropdown-item"
+            type="checkbox"
+            name="Customer"
+            id="Customer"
+            value="Customer"
+            (change)="onChange($event.target)"
+            [checked]="user.roles.Customer"
+          />
+          <label for="Customer"> Customer </label>
+        </div>
+      </li>
+      <li>
+        <div>
+          <input
+            class="dropdown-item"
+            type="checkbox"
+            name="Manager"
+            id="Manager"
+            value="Manager"
+            (change)="onChange($event.target)"
+            [checked]="user.roles.Manager"
+          />
+          <label for="Manager"> Manager </label>
+        </div>
+      </li>
+      <li>
+        <div>
+          <input
+            class="dropdown-item"
+            type="checkbox"
+            name="Admin"
+            id="Admin"
+            value="Admin"
+            (change)="onChange($event.target)"
+            [checked]="user.roles.Admin"
+          />
+          <label for="Admin"> Admin </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="isLoading">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<ul class="list-group filter-input-container">
+  <li class="list-group-item filter-input"><strong>Filter by:</strong></li>
+
+  <li class="list-group-item" *ngFor="let item of dropdownListsObj | keyvalue">
+    <div class="label">
+      <label> {{ item.key }} </label>
+    </div>
+    <div class="select">
+      <ng-multiselect-dropdown
+        class="dropdown"
+        [placeholder]="'select ' + item.key"
+        [settings]="dropdownSettings"
+        [data]="getData(item.key)"
+        [(ngModel)]="selectedItemsObj[item.key]"
+        (onSelect)="onFilterChange($event)"
+        (onDeSelect)="onFilterChange($event)"
+        (onSelectAll)="onFilterChange($event)"
+        (onDeSelectAll)="onFilterChange($event)"
+        aria-setsize="10px"
+      >
+      </ng-multiselect-dropdown>
+    </div>
+  </li>
+</ul>

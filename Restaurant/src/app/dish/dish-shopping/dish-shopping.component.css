@@ -1,0 +1,9 @@
+button {
+  margin: 10px;
+}
+button.remove {
+  position: absolute;
+  font-size: 10px;
+  right: 0%;
+  top: 0%;
+}

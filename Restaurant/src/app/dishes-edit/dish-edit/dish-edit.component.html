@@ -1,0 +1,106 @@
+<br />
+<app-dish-images [dish]="dish"></app-dish-images>
+<hr />
+
+<!-- Cannot do *ngFor, do not know why, but it just doesn't work on Dish type -->
+<div class="form-container">
+  <form #dishEditForm="ngForm" (ngSubmit)="onSubmit(dishEditForm)">
+    <div class="form-group">
+      <label for="imgUrls">images urls: </label>
+      <input
+        type="text"
+        name="imgUrls"
+        id="imgUrls"
+        class="form-control"
+        [(ngModel)]="dish.imgUrls"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="name">dish Name: </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        [(ngModel)]="dish.name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="cuisineType">cuisineType: </label>
+      <input
+        type="text"
+        name="cuisineType"
+        id="cuisineType"
+        class="form-control"
+        [(ngModel)]="dish.cuisineType"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="category">category: </label>
+      <input
+        type="text"
+        name="category"
+        id="category"
+        class="form-control"
+        [(ngModel)]="dish.category"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="ingredients">ingredients: </label>
+      <input
+        type="text"
+        name="ingredients"
+        id="ingredients"
+        class="form-control"
+        [(ngModel)]="dish.ingredients"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="maxPerDay">maxPerDay: </label>
+      <input
+        type="number"
+        name="maxPerDay"
+        id="maxPerDay"
+        class="form-control"
+        [(ngModel)]="dish.maxPerDay"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">price: </label>
+      <input
+        type="number"
+        name="price"
+        id="price"
+        class="form-control"
+        [(ngModel)]="dish.price"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">description: </label>
+      <input
+        type="text"
+        name="description"
+        id="description"
+        class="form-control"
+        [(ngModel)]="dish.description"
+        required
+      />
+    </div>
+    <div style="margin-top: 20px">
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="!dishEditForm.valid"
+      >
+        Update Dish
+      </button>
+    </div>
+  </form>
+</div>

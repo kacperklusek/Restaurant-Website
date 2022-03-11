@@ -1,0 +1,11 @@
+<div class="container card">
+  <div class="rate" *ngIf="review.rate">{{ review.rate }}/5</div>
+  <div class="name-and-nick">
+    {{ review.name }}
+    <span class="small">({{ review.nickName }}) id: {{ review.userID }}</span>
+  </div>
+  <div class="content">"{{ review.content }} "</div>
+  <div class="purchase-date" *ngIf="review.purchaseDate">
+    Purchased at: {{ review.purchaseDate }}
+  </div>
+</div>

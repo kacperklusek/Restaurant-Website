@@ -1,0 +1,114 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)" class="card">
+  <div class="form-group">
+    <label><small>Name: </small></label>
+    <div class="input-container">
+      <input
+        class="form-control"
+        type="text"
+        name="name"
+        formControlName="name"
+      />
+      <span *ngIf="formErrors.get('name')">
+        {{ formErrors.get("name") }}
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label><small>Cuisine type: </small> </label>
+    <input
+      class="form-control"
+      type="text"
+      name="cuisineType"
+      formControlName="cuisineType"
+    />
+  </div>
+  <div class="form-group">
+    <label><small>Type: </small></label>
+    <input
+      class="form-control"
+      type="text"
+      name="type"
+      formControlName="type"
+    />
+  </div>
+  <div class="form-group">
+    <label><small>Category: </small></label>
+    <input
+      class="form-control"
+      type="text"
+      name="category"
+      formControlName="category"
+    />
+  </div>
+  <div class="form-group">
+    <label><small>Ingredients: </small></label>
+    <div class="input-container">
+      <input
+        class="form-control"
+        type="text"
+        name="ingredients"
+        formControlName="ingredients"
+      />
+      <span *ngIf="formErrors.get('ingredients')">{{
+        formErrors.get("ingredients")
+      }}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label><small>Max number </small>per day: </label>
+    <div class="input-container">
+      <input
+        class="form-control"
+        type="number"
+        name="maxPerDay"
+        formControlName="maxPerDay"
+      />
+      <span *ngIf="formErrors.get('maxPerDay')">{{
+        formErrors.get("maxPerDay")
+      }}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label><small>price</small></label>
+    <div class="input-container">
+      <input
+        class="form-control"
+        type="number"
+        name="price"
+        formControlName="price"
+      />
+      <span *ngIf="formErrors.get('price')">{{ formErrors.get("price") }}</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label><small>Description: </small></label>
+    <input
+      class="form-control"
+      type="text"
+      name="description"
+      formControlName="description"
+    />
+  </div>
+  <div class="form-group">
+    <label
+      ><small>URLs to </small>images (separate by ',' if more than one):
+    </label>
+    <div class="input-container">
+      <input
+        class="form-control"
+        type="url"
+        name="imgUrls"
+        formControlName="imgUrls"
+      />
+      <span *ngIf="formErrors.get('imgUrls')">{{
+        formErrors.get("imgUrls")
+      }}</span>
+    </div>
+  </div>
+  <input
+    class="form-control"
+    type="submit"
+    class="btn btn-success"
+    value="Add this dish"
+  />
+</form>

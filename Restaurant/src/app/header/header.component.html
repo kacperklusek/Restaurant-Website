@@ -1,0 +1,124 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  [ngClass]="{
+    'navbar-expand-md': !authService.hasRole('Admin')
+  }"
+>
+  <a class="navbar-brand" routerLink="/">
+    <img
+      src="../../assets/images/bigstock-Print-163213010.png"
+      alt="logo"
+      class="home-logo img-responsive"
+    />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item align-self-end">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/adminView"
+          *ngIf="isAdmin()"
+          >Admin View</a
+        >
+      </li>
+      <li class="nav-item align-self-end">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/menu-edit"
+          *ngIf="isAdmin()"
+          >Edit Menu</a
+        >
+      </li>
+      <li class="nav-item align-self-end">
+        <a class="nav-link" routerLinkActive="active" routerLink="/menu"
+          >Menu</a
+        >
+      </li>
+      <li class="nav-item align-self-end" *ngIf="isAuthenticated">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/shopping-cart"
+        >
+          <span>Shopping Cart </span>
+          <div
+            style="color: white; padding: 20 px"
+            [ngStyle]="{
+              'background-color':
+                orderService.inBasket > 10 ? 'blue' : 'darkorange'
+            }"
+            class="cart-counter"
+          >
+            {{ orderService.inBasket }}
+          </div>
+        </a>
+      </li>
+      <li class="nav-item align-self-end">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/add-dish"
+          *ngIf="isManager()"
+          >Add dish</a
+        >
+      </li>
+
+      <!-- <li class="nav-item align-self-end" id="currency-change">
+        <app-currency-change></app-currency-change>
+      </li> -->
+      <li class="nav-item align-self-end" id="authentication">
+        <a
+          class="nav-link"
+          routerLink="/auth"
+          *ngIf="!isAuthenticated"
+          routerLinkActive="active"
+          >Sign In / Up</a
+        >
+        <a class="nav-link" (click)="onLogout()" *ngIf="isAuthenticated"
+          >Logout</a
+        >
+      </li>
+      <li class="nav-item align-self-end">
+        <div class="btn-group">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <small>manage</small>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton"
+            style="background-color: rgba(78, 78, 78, 0.815)"
+          >
+            <li>
+              <app-currency-change></app-currency-change>
+            </li>
+            <li *ngIf="isAdmin()">
+              <hr />
+
+              <app-login-persist></app-login-persist>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

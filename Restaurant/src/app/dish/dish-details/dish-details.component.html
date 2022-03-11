@@ -1,0 +1,19 @@
+<br />
+<app-dish-images [dish]="dish"></app-dish-images>
+<hr />
+<app-dish-description [dish]="dish"></app-dish-description>
+<hr />
+<app-dish-shopping [dish]="dish" [inBasket]="getInBasket()"></app-dish-shopping>
+<hr />
+<button class="btn btn-secondary" (click)="router.navigate(['menu'])">
+  Back to Menu
+</button>
+<hr />
+<p style="font-size: 30px">Reviews:</p>
+<app-dish-review
+  *ngFor="let rate of dish.rating"
+  [review]="rate"
+></app-dish-review>
+<hr />
+<app-dish-rate [dish]="dish" *ngIf="!isBanned()"></app-dish-rate>
+<p *ngIf="isBanned()">You have been banned</p>

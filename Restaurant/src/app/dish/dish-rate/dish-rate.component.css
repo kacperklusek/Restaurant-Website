@@ -1,0 +1,34 @@
+#rate {
+  font-size: 25px;
+}
+form {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(78, 78, 78, 0.815);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.form-control,
+ngb-rating {
+  text-align: start;
+  width: 70%;
+  margin-right: 10px;
+}
+
+label {
+  padding-top: 6px;
+  padding-right: 5%;
+  padding-left: 20px;
+}
+
+.sbmt {
+  justify-content: center;
+}

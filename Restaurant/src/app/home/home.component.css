@@ -1,0 +1,72 @@
+.parallax1 {
+  /* The image used */
+  background-image: linear-gradient(
+      180deg,
+      rgba(119, 83, 83, 0.6) 0%,
+      rgba(99, 70, 70, 0.6) 100%
+    ),
+    url("../../assets/images/bgrestaurant.jpg");
+
+  /* Set a specific height */
+  min-height: 1200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  color: white;
+}
+.cont {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.card {
+  background: linear-gradient(
+    0deg,
+    rgba(97, 97, 97, 0.712) 0%,
+    rgba(128, 128, 128, 0.63) 100%
+  );
+  padding: 20px;
+  width: 100%;
+  margin-top: 100px;
+}
+.mapouter {
+  align-self: center;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}

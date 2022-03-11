@@ -1,0 +1,17 @@
+<div class="list-group">
+  <div class="list-group-item"><b>name:</b> {{ dish.name | uppercase }}</div>
+  <div class="list-group-item">
+    <b>cuisine type:</b> {{ dish.cuisineType | uppercase }}
+  </div>
+  <div class="list-group-item"><b>category:</b> {{ dish.category }}</div>
+  <div class="list-group-item">
+    <span *ngIf="currencyService.currency === 'dollar'"
+      ><b>price:</b> {{ dish.price | currency: "USD" }}
+    </span>
+    <span *ngIf="currencyService.currency === 'euro'"
+      ><b>price:</b> {{ (dish.price * 3) / 4 | currency: "EUR" }}</span
+    >
+  </div>
+  <div class="list-group-item"><b>description:</b> {{ dish.description }}</div>
+  <div class="list-group-item"><b>rating:</b> {{ dish.rate }}</div>
+</div>

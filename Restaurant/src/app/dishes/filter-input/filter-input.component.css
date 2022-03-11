@@ -1,0 +1,24 @@
+.list-group-item {
+  display: flex;
+  flex-direction: row;
+}
+.label {
+  text-align: left;
+  width: 200px;
+  flex-grow: 1;
+}
+.select {
+  flex-grow: 10;
+}
+.list-group-item {
+  background-color: rgba(78, 78, 78, 0.815);
+  color: white;
+}
+
+.filter-input-container {
+  margin: 20px;
+  margin-top: 0;
+}
+
+span {
+}

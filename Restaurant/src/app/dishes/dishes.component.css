@@ -1,0 +1,34 @@
+.dishes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.slider {
+  background-color: transparent;
+  border: unset;
+  color: white;
+}
+
+.paginator {
+  position: relative;
+  margin: 30px;
+  font-size: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-sizer {
+  font-size: 14px;
+  position: absolute;
+  right: 150px;
+}
+
+.form-control {
+  background-color: rgba(78, 78, 78, 0.815);
+  color: white;
+  padding: 3px;
+}

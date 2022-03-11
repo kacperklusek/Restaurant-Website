@@ -1,0 +1,52 @@
+<div>
+  Login persistence:
+  <input
+    [(ngModel)]="authService.loginPersistence"
+    (change)="handleChange()"
+    class="btn-check"
+    type="radio"
+    name="mode"
+    id="None"
+    value="None"
+  />
+  <label
+    class="btn btn-outline-secondary"
+    style="color: rgb(230, 230, 230)"
+    for="None"
+  >
+    None
+  </label>
+  <input
+    [(ngModel)]="authService.loginPersistence"
+    (change)="handleChange()"
+    class="btn-check"
+    type="radio"
+    name="mode"
+    id="Session"
+    value="Session"
+  />
+  <label
+    class="btn btn-outline-secondary"
+    style="color: rgb(230, 230, 230)"
+    for="Session"
+    checked
+  >
+    Session
+  </label>
+  <input
+    [(ngModel)]="authService.loginPersistence"
+    (change)="handleChange()"
+    class="btn-check"
+    type="radio"
+    name="mode"
+    id="Local"
+    value="Local"
+  />
+  <label
+    class="btn btn-outline-secondary"
+    style="color: rgb(230, 230, 230)"
+    for="Local"
+  >
+    Local
+  </label>
+</div>

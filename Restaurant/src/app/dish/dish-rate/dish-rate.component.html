@@ -1,0 +1,78 @@
+<p *ngIf="!boughtDish()">Buy this dish to make a review</p>
+<p *ngIf="givenReview()">You've already made a review</p>
+
+<form (ngSubmit)="onSubmit()" #frm="ngForm">
+  <fieldset [disabled]="!boughtDish() || givenReview()">
+    <div class="form-group">
+      <label for="nickName">NickName:</label>
+      <input
+        type="text"
+        id="nickName"
+        class="form-control"
+        name="nickName"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        ngModel
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="content">Your Review:</label>
+      <textarea
+        minlength="50"
+        maxlength="500"
+        name="content"
+        id="content"
+        class="form-control"
+        rows="4"
+        ngModel
+      ></textarea>
+    </div>
+
+    <div
+      class="form-group"
+      *ngIf="!auth.hasRole('Manager') && auth.hasRole('Customer')"
+    >
+      <label for="purchaseDate">Purchase Date:</label>
+      <input
+        type="date"
+        name="purchaseDate"
+        id="purchaseDate"
+        class="form-control"
+        ngModel
+        required
+      />
+    </div>
+
+    <div
+      class="form-group"
+      *ngIf="!auth.hasRole('Manager') && auth.hasRole('Customer')"
+    >
+      <label for="rate">Your Rate: </label>
+      <ngb-rating
+        name="rate"
+        id="rate"
+        [max]="5"
+        ngModel
+        [disabled]="!boughtDish()"
+      ></ngb-rating>
+    </div>
+
+    <div class="form-group sbmt">
+      <button class="btn btn-secondary" type="submit" [disabled]="!frm.valid">
+        Submit
+      </button>
+    </div>
+  </fieldset>
+</form>

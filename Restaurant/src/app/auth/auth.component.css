@@ -1,0 +1,10 @@
+.form-group,
+.form-group > * {
+  text-align: left;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(78, 78, 78, 0.815);
+  position: relative;
+}

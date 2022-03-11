@@ -1,0 +1,59 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<app-filter-input></app-filter-input>
+
+<div class="dishes-container">
+  <div
+    *ngFor="
+      let dish of this.dishes
+        | filter: 'price':dishAttributes.price
+        | filter: 'cuisineType':dishAttributes.cuisineType
+        | filter: 'rate':dishAttributes.rate
+        | filter: 'category':dishAttributes.category as filteredDishes;
+      let i = index
+    "
+  >
+    <app-dish
+      *ngIf="isInPage(i)"
+      [dish]="dish"
+      [hasMaxPrice]="dish.price === maxDishPrice"
+      [hasMinPrice]="dish.price === minDishPrice"
+      (deleteDish)="removeDish($event)"
+    ></app-dish>
+  </div>
+</div>
+
+<div class="paginator">
+  <button class="slider" (click)="onSwipeLeft()" [disabled]="currentPage == 1">
+    <i class="fa fa-caret-left"></i>
+  </button>
+  <span style="font-size: 30px; margin: 10px">{{ currentPage }}</span>
+  <button
+    class="slider"
+    (click)="onSwipeRight()"
+    [disabled]="currentPage > dishes.length / pageSize"
+  >
+    <i class="fa fa-caret-right"></i>
+  </button>
+
+  <div class="page-sizer">
+    <label for="pageSize">items on page:</label>
+    <select
+      (change)="onSelectPageSize()"
+      name="pageSize"
+      id="pageSize"
+      class="form-control"
+      [(ngModel)]="pageSize"
+    >
+      <option value="4">4</option>
+      <option value="8">8</option>
+      <option value="16">16</option>
+      <option value="32">32</option>
+      <option value="64">64</option>
+      <option [value]="dishes.length">all</option>
+    </select>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<div class="image-wrapper">
+  <i
+    class="fa fa-caret-left"
+    style="font-size: 40px"
+    (click)="onSwipeLeft()"
+  ></i>
+  <img alt="dish image" [src]="getImageUrl()" />
+  <i
+    class="fa fa-caret-right"
+    style="font-size: 40px"
+    (click)="onSwipeRight()"
+  ></i>
+</div>
+<div style="font-size: 15px">
+  {{ imageIndex + 1 }}/{{ dish.imgUrls.length }}
+</div>

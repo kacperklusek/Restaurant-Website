@@ -1,0 +1,44 @@
+.card {
+  background-color: rgba(78, 78, 78, 0.877);
+  position: relative;
+  padding-left: 40px;
+}
+.card > * {
+  text-align: start;
+}
+
+.rate {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+  background-color: rgba(116, 116, 116, 0.623);
+}
+
+.name-and-nick {
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.small {
+  color: rgb(206, 206, 206);
+}
+
+.content {
+  padding: 10px;
+  padding-left: 30px;
+  color: rgb(206, 206, 206);
+  font-style: italic;
+}
+
+.purchase-date {
+  font-weight: bolder;
+  font-size: 14px;
+  padding-bottom: 20px;
+}

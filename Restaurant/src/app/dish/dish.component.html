@@ -1,0 +1,49 @@
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    [ngClass]="{ 'max-price': hasMaxPrice, 'min-price': hasMinPrice }"
+  >
+    <div class="container">
+      <div class="image-wrapper">
+        <app-dish-image [dish]="dish"></app-dish-image>
+      </div>
+      <div class="rate">
+        <b>Rate: </b><span>{{ dish.rate }}</span>
+      </div>
+      <div class="shopping">
+        <div class="name">
+          <b>{{ dish.name }}</b>
+        </div>
+        <div class="price" *ngIf="currencyService.currency === 'dollar'">
+          {{ dish.price | currency: "USD" }}
+        </div>
+        <div class="price" *ngIf="currencyService.currency === 'euro'">
+          {{ (dish.price * 3) / 4 | currency: "EUR" }}
+        </div>
+        <app-dish-shopping
+          *ngIf="router.url === '/menu'"
+          [dish]="dish"
+          [inBasket]="getInBasket()"
+        ></app-dish-shopping>
+        <button
+          type="button"
+          class="close btn btn-danger"
+          aria-label="Close"
+          (click)="onDeleteDish()"
+          *ngIf="router.url === '/menu-edit'"
+        >
+          &times; Delete
+        </button>
+        <button
+          type="button"
+          class="close btn btn-success"
+          aria-label="Close"
+          (click)="onEditDish()"
+          *ngIf="router.url === '/menu-edit'"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  </li>
+</ul>

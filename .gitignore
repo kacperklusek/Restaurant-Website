@@ -1,0 +1,12 @@
+.vscode
+Flex_grid_TworzenieLayout.pdf
+*.zip
+.ngmodules
+.angular
+node_modules
+
+
+# private firebase api key
+serviceAccountKey.json
+webApiKeyService.ts
+

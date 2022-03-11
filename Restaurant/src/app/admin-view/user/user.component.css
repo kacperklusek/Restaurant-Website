@@ -1,0 +1,30 @@
+.card {
+  background-color: rgba(78, 78, 78, 0.877);
+  position: relative;
+  padding: 20px;
+  padding-left: 40px;
+  margin: 10px;
+}
+.card > * {
+  text-align: start;
+}
+
+.small {
+  color: rgb(206, 206, 206);
+}
+.role {
+  text-align: start;
+}
+.container.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#banUser {
+  height: fit-content;
+}
+
+app-loading-spinner > .lds-spinner {
+  width: 80px;
+  height: 80px;
+}

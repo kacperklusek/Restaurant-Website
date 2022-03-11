@@ -1,0 +1,62 @@
+<div class="dishes-container">
+  <ul class="list-group" *ngFor="let elem of inBasketDishes | keyvalue">
+    <li class="list-group-item" *ngIf="elem.value > 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-5 col-md-5">
+            <app-dish-image [dish]="elem.key"></app-dish-image>
+          </div>
+          <div class="col-xs-5 col-md-7">
+            <div class="list-group">
+              <div class="list-group-item">
+                <b>name:</b> {{ elem.key.name | uppercase }}
+              </div>
+              <div class="list-group-item">
+                <span *ngIf="currencyService.currency === 'dollar'"
+                  ><b>price:</b> {{ elem.key.price | currency: "USD" }}
+                </span>
+                <span *ngIf="currencyService.currency === 'euro'"
+                  ><b>price:</b>
+                  {{ (elem.key.price * 3) / 4 | currency: "EUR" }}</span
+                >
+              </div>
+              <div class="list-group-item">
+                <app-dish-shopping
+                  [dish]="elem.key"
+                  [inBasket]="elem.value"
+                ></app-dish-shopping>
+              </div>
+              <div class="list-group-item">
+                <span *ngIf="currencyService.currency === 'dollar'"
+                  ><b>Worth ({{ elem.value }}): </b>
+                  {{ elem.key.price * elem.value | currency: "USD" }}
+                </span>
+                <span *ngIf="currencyService.currency === 'euro'"
+                  ><b>Worth ({{ elem.value }}): </b>
+                  {{
+                    ((elem.key.price * 3) / 4) * elem.value | currency: "EUR"
+                  }}</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item"><b>Basket Value:</b></li>
+    <li class="list-group-item">
+      <span *ngIf="currencyService.currency === 'dollar'">
+        {{ sumInBasket | currency: "USD" }}
+      </span>
+      <span *ngIf="currencyService.currency === 'euro'">
+        {{ (sumInBasket * 3) / 4 | currency: "EUR" }}</span
+      >
+    </li>
+  </ul>
+
+  <button class="btn btn-success" [disabled]="sumInBasket == 0" (click)="onBuyNow()">
+    Buy Now!
+  </button>
+</div>

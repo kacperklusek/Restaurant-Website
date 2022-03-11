@@ -1,0 +1,38 @@
+<p style="font-size: 12px; margin: 0" *ngIf="inBasket == 0">
+  add this dish to Your shopping cart!
+</p>
+<p *ngIf="inBasket !== 0 && inBasket !== dish.maxPerDay"></p>
+<p style="font-size: 12px; margin: 0" *ngIf="inBasket == dish.maxPerDay">
+  Cannot add more :(
+</p>
+<button
+  [ngStyle]="{
+    'box-shadow': verifyNumberOfElements()
+      ? '0px 0px 12px 9px orange'
+      : 'inherit'
+  }"
+  [disabled]="inBasket == dish.maxPerDay"
+  (click)="addToBasket()"
+  class="btn btn-success"
+>
+  +
+</button>
+<span> {{ inBasket }}</span>
+<button
+  [disabled]="inBasket == 0"
+  (click)="removeFromBasket()"
+  class="btn btn-danger"
+>
+  -
+</button>
+
+<!-- this button shows up only in shopping cart and 
+  by clicking it you remove the dish FROM SHOPPING CART -->
+<button
+  class="btn btn-danger remove"
+  (click)="removeAllFromBasket()"
+  [disabled]="inBasket === 0"
+  *ngIf="router.url === '/shopping-cart'"
+>
+  remove from cart
+</button>
